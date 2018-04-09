@@ -5,22 +5,12 @@
 
   </mat-sidenav>
   <mat-sidenav-content class="contenido">
-      <app-cabecera
-       (abrirMenu)="sidenav.toggle()">
-      </app-cabecera>
-      {{prueba}}
-      <button mat-button
-      (click)="sidenav.toggle()">Click</button>
-      <br>
-      <button mat-button
-      (click)="sidenav.toggle()">Click</button>
-      <br>
-      <button mat-button
-      (click)="sidenav.toggle()">Click</button>
-      <br>
-      <button mat-button
-      (click)="sidenav.toggle()">Click</button>
-      <app-pie-pagina></app-pie-pagina>
+    <app-cabecera
+      (abrirMenu)="sidenav.toggle()">
+    </app-cabecera>
+    <app-alta-materias></app-alta-materias>
+    <app-lectura-materias></app-lectura-materias>
+    <app-pie-pagina></app-pie-pagina>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
