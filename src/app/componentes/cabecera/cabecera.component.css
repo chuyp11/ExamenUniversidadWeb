@@ -1,0 +1,14 @@
+.cabecera{
+  margin: 0px;
+  padding: 0px;
+}
+
+.titulo{
+  position: absolute;
+  margin-left: 72px;
+}
+
+.material-icons{
+  position: absolute;
+  margin-left: 16px;
+}
