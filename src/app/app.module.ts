@@ -16,6 +16,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 // import 'web-animations-js';
 
+// firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.component';
@@ -32,6 +38,9 @@ import { AltaMateriasComponent } from './componentes/administrar-materias/alta-m
     AltaMateriasComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     BrowserModule,
     MatButtonModule,
     MatCardModule,

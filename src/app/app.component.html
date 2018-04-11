@@ -1,4 +1,4 @@
-<mat-sidenav-container class="contenedor">
+<!-- <mat-sidenav-container class="contenedor">
   <mat-sidenav class="menuIzquierda"
   #sidenav mode="over"
   fixedInViewport [opened]=estaAbierto>menu Star {{estaAbierto}}
@@ -12,6 +12,12 @@
     <app-lectura-materias></app-lectura-materias>
     <app-pie-pagina></app-pie-pagina>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+<ul>
+  <li *ngFor="let item of items | async">
+      <pre>{{ item | json }}</pre>
+  </li>
+</ul>
 
 
