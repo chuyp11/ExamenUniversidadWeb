@@ -28,6 +28,10 @@ import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.componen
 import { LecturaMateriasComponent } from './componentes/administrar-materias/lectura-materias/lectura-materias.component';
 import { AltaMateriasComponent } from './componentes/administrar-materias/alta-materias/alta-materias.component';
 
+// servicios
+import { MateriasService } from './servicios/materias.service';
+
+
 
 @NgModule({
   declarations: [
@@ -52,7 +56,7 @@ import { AltaMateriasComponent } from './componentes/administrar-materias/alta-m
     MatToolbarModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MateriasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

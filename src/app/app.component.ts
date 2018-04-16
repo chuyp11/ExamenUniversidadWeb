@@ -10,19 +10,11 @@ import { AngularFirestore } from 'angularfire2/firestore';
 })
 export class AppComponent implements OnInit  {
 
-  // estaAbierto: boolean;
+  estaAbierto: boolean;
 
-  // constructor( ) { }
+  constructor( ) { }
 
-  // ngOnInit() {
-  //   this.estaAbierto = false;
-  // }
-
-  public items: Observable<any[]>;
-
-  constructor(db: AngularFirestore) {
-    this.items = db.collection('/items').valueChanges();
+  ngOnInit() {
+    this.estaAbierto = false;
   }
-
-  ngOnInit() {}
 }

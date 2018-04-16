@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaMateriasComponent implements OnInit {
 
+  modelo = { nombre: ''};
+
   constructor() { }
 
   ngOnInit() {
