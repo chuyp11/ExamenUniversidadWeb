@@ -17,9 +17,13 @@ export class LecturaMateriasComponent implements OnInit {
   constructor(public _data: MateriasService) { }
 
   ngOnInit() {
+    this.lecturaMaterias();
+  }
+
+  lecturaMaterias() {
     this._data.getMaterias().subscribe(
-      (materia: Materia[]) => {
-        this.materias = materia;
+      (materias: Materia[]) => {
+        this.materias = materias;
         this.dataSource = new MatTableDataSource(this.materias);
         console.log('ngOnInit()', this.materias);
       }

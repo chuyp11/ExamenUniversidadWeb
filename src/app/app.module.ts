@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 // materialAngular componentes
 import { MatButtonModule,
   MatCardModule,
@@ -46,6 +47,7 @@ import { MateriasService } from './servicios/materias.service';
     AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserModule,
+    FormsModule,
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,

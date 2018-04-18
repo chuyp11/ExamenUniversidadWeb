@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Materia } from '../../../estructuras/materia';
 
 @Component({
   selector: 'app-alta-materias',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaMateriasComponent implements OnInit {
 
-  modelo = { nombre: ''};
+  // materia: Materia;
+  materia = new Materia('', '');
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log(this.materia);
   }
 
 }
