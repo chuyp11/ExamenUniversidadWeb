@@ -14,14 +14,14 @@ export class LecturaMateriasComponent implements OnInit {
   displayedColumns = [/*'id',*/ 'nombre'];
   dataSource: any;
 
-  constructor(public _data: MateriasService) { }
+  constructor(public materiasService: MateriasService) { }
 
   ngOnInit() {
     this.lecturaMaterias();
   }
 
   lecturaMaterias() {
-    this._data.getMaterias().subscribe(
+    this.materiasService.getMaterias().subscribe(
       (materias: Materia[]) => {
         this.materias = materias;
         this.dataSource = new MatTableDataSource(this.materias);

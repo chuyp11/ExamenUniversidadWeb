@@ -4,7 +4,7 @@
   </mat-card-header>
   <mat-card-content>
     <mat-form-field>
-      <form #formulario="ngForm" (ngSubmit)="onSubmit()" id="formulario">
+      <form #formulario="ngForm" id="formulario">
           <input matInput placeholder="Nombre"
             [(ngModel)]="materia.nombre" name="nombre" required>
       </form>
@@ -13,6 +13,7 @@
   <mat-card-actions>
     <button mat-button>Cancelar</button>
     <button mat-button form="formulario" type="submit"
-      [disabled]="!formulario.form.valid">Agregar</button>
+      [disabled]="!formulario.form.valid"
+      (click)="onSubmit();formulario.reset()">Agregar</button>
   </mat-card-actions>
 </mat-card>
